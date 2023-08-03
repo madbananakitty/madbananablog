@@ -24,6 +24,15 @@
   --clr-neutral-900: hsla(0, 0%, 10%, 1);
 }
 
+.logo{
+  display: inline-block;
+  float:left;
+  padding-top:0;
+  margin-top:0;
+  width:55%;
+  height:100%;
+}
+
 @media (min-width: 35em) {
   :root {
     --fs-300: 1rem;
@@ -128,7 +137,7 @@ body {
 h1,
 h2,
 h3 {
-  font-family: var(--ff-heading);
+  font-family: "Quicksand";
   font-weight: var(--fw-900);
   line-height: 1.1;
 }
@@ -139,9 +148,10 @@ strong {
 
 section,
 .section {
-  padding: min(10vh, 10em) 0;
+  padding: min(2vh, 2em) 0;
+  padding-bottom:2em;
+  padding-top:2em;
 }
-
 
 
 /* //////////////////////
@@ -179,8 +189,9 @@ section,
 /* typgraphy */
 
 .article-title,
-.section-title {
-  color: var(--clr-primary-500);
+.section-title,
+.sub-title {
+  color: #ff3131;
 }
 
 .article-title {
@@ -191,6 +202,10 @@ section,
   font-size: var(--fs-600);
 }
 
+.sub-title {
+  font-size: var(--fs-500);
+
+}
 
 /* //////////////////////
   Header
@@ -208,6 +223,7 @@ section,
 .nav-list {
   margin: 0;
   padding: 0;
+  padding-top: 2em;
 }
 
 .nav-list a {
@@ -217,7 +233,7 @@ section,
 
 .nav-list a:focus,
 .nav-list a:hover {
-  color: var(--clr-primary-400);
+  color: #00c4cc;
   text-decoration: underline;
 }
 
@@ -226,10 +242,9 @@ section,
   /////////////////////// */
 
 .site-footer {
-  --logo-color: currentColor;
   padding: 2em 0;
   color: var(--clr-neutral-100);
-  background-color: var(--clr-primary-500);
+  background-color: #00c4cc;
   text-align: center;
 }
 
@@ -258,7 +273,7 @@ section,
 }
 
 .featured-articles {
-  background-color: var(--clr-primary-200);
+  background-color: #e0feff;
 }
 
 .articles__list {
@@ -361,16 +376,17 @@ section,
   outline-offset: 0.25em;
 }
 
+
 .btn--primary {
-  background: var(--clr-primary-400);
+  background: #00c4cc;
   color: var(--clr-neutral-100);
   font-weight: var(--fw-700);
-  border: 2px solid var(--clr-primary-400);
+  border: 2px solid #00c4cc;
 }
 .btn--primary:hover,
 .btn--primary:focus {
-  background: var(--clr-primary-500);
-  border-color: var(--clr-primary-500); 
+  background: #009399;
+  border-color: #009399; 
 }
 
 .btn--neutral {
@@ -384,4 +400,31 @@ section,
 .btn--neutral:focus {
   color: var(--clr-neutral-100);
   background-color: var(--clr-neutral-900);
+}
+
+.notification-top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 40px;
+  line-height: 40px;
+  width: 100%;
+  background: #0CC0DF;
+  text-align: center;
+  color: #FFFFFF;
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 14px;
+}
+.notification-top-bar p {
+  padding: 0;
+  margin: 0;
+}
+.notification-top-bar p a {
+  padding: 5px 10px;
+  border-radius: 3px;
+  background: #FFF;
+  color: #1ABC9C;
+  font-weight: bold;
+  text-decoration: none;
 }

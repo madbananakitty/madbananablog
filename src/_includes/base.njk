@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--let web designers take control over the viewport-->
+	<title> {{title}} </title>
+	<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+	<link rel="stylesheet" href="/style.css"> 
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+	<!--Favicon
+	/*
+	<link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css/main.css"> 
+-->
+</head>
+<body>
+	<div class="notification-top-bar">
+		<p>Read my latest blog: <small><a href="./blog/2023-08-02-尋找自由的路上/">尋找自由的路上</a></small></p>
+  </div>
+	{% include 'header.njk'%}
+	<main>
+		{{content|safe}}
+	</main>
+	{% include 'footer.njk'%}
+</body>
+</html>
